@@ -2,7 +2,7 @@ import React from 'react'
 
 import Head from './head'
 
-const Main = () => {
+const Home = () => {
   return (
     <div className="flex justify-center p-4 bg-slate-300">
       <Head title="Main" />
@@ -11,4 +11,4 @@ const Main = () => {
   )
 }
 
-export default Main
+export default Home

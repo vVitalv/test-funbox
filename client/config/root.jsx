@@ -1,26 +1,15 @@
 import React from 'react'
-import {
-  BrowserRouter,
-  Routes,
-  Route
-} from 'react-router-dom'
-import { Provider } from 'react-redux'
+import { BrowserRouter, Routes, Route } from 'react-router-dom'
 
-import store from '../redux'
-import Startup from './startup'
-import Main from '../components/main'
+import Home from '../components/home'
 
 const Root = () => {
   return (
-    <Provider store={store}>
-      <Startup>
-        <BrowserRouter>
-          <Routes>
-            <Route path="/" element={<Main />} />
-          </Routes>
-        </BrowserRouter>
-      </Startup>
-    </Provider>
+    <BrowserRouter>
+      <Routes>
+        <Route path="/" element={<Home />} />
+      </Routes>
+    </BrowserRouter>
   )
 }
 
