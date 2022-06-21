@@ -45,6 +45,10 @@ const config = {
         ]
       },
       {
+        test: /\.(png|jpg|gif|webp)$/,
+        type: 'asset/resource'
+      },
+      {
         test: /\.svg$/,
         type: 'asset/inline'
       }
