@@ -1,7 +1,12 @@
-@import "tailwindcss/base";
-@import "tailwindcss/components";
-@import "tailwindcss/utilities";
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
 
-body {
-  font-family: 'Exo 2', sans-serif;
+@font-face {
+  font-family: 'Trebuchet MS';
+  src: local('Trebuchet MS'), url('/client/assets/fonts/trebuc.ttf') format('opentype');
+}
+@font-face {
+  font-family: 'Exo 2 Thin';
+  src: url('/client/assets/fonts/Exo2-Thin.ttf') format('opentype');
 }

@@ -45,12 +45,12 @@ const config = {
         ]
       },
       {
-        test: /\.(png|jpg|gif|webp)$/,
+        test: /\.(png|jpg|gif|webp|svg)$/,
         type: 'asset/resource'
       },
       {
-        test: /\.svg$/,
-        type: 'asset/inline'
+        test: /\.(woff|woff2|eot|ttf|otf)$/i,
+        type: 'asset/resource'
       }
     ]
   },
@@ -65,7 +65,7 @@ const config = {
     new CopyWebpackPlugin({
       patterns: [
         {
-          from: `client/index.html`,
+          from: 'client/index.html',
           to: '[name][ext]'
         },
         {
@@ -73,11 +73,11 @@ const config = {
           to: '[name][ext]'
         },
         {
-          from: `client/assets/images`,
+          from: 'client/assets/images',
           to: 'assets/images'
         },
         {
-          from: `client/assets/fonts`,
+          from: 'client/assets/fonts',
           to: 'assets/fonts'
         }
       ]
