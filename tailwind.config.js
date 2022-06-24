@@ -4,7 +4,7 @@ module.exports = {
     extend: {
       fontFamily: {
         trebuchet: ['"Trebuchet MS"', 'sans-serif'],
-        exo: ['Exo\\ 2\\ Thin', 'sans-serif']
+        exo: ['"Exo 2 Thin"', 'sans-serif']
       }
     }
   },
