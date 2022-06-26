@@ -18,26 +18,22 @@ const Cote = ({ flavor, portion, inStock }) => {
     return cote_def
   }
   const ovalBg = () => {
-    if (inStock) return 'bg-[#1698D9]'
+    if (!inStock) return 'bg-[#B3B3B3]'
     if (isChecked) return 'bg-[#D91667]'
-    return 'bg-[#B3B3B3]'
+    return 'bg-[#1698D9]'
   }
   const underLine = () => {
     const checkedUnderlines = {
-      10: <p>мышь в подарок</p>,
-      40: <p className="first-letter:font-bold">2 мыши в подарок</p>,
-      100: <p className="first-letter:font-bold">5 мышей в подарок</p>
+      10: <p>Печень утки разварная с артишоками.</p>,
+      40: <p>Головы щучьи с чесноком да свежайшая сёмгушка.</p>,
+      100: <p>Филе из цыплят с трюфелями в бульоне.</p>
     }
     if (!inStock) {
-      return (
-        <p className="text-[13px] pt-3 font-normal text-[#FFFF66] text-center">
-          Печалька, с {flavor} закончился
-        </p>
-      )
+      return <p className="text-[#FFFF66]">Печалька, с {flavor} закончился</p>
     }
     if (isChecked) return checkedUnderlines[portion]
     return (
-      <p className="text-[13px] pt-3 font-normal text-white text-center">
+      <p>
         Чего сидишь? Порадуй котэ,{' '}
         <button
           className="underline decoration-dashed font-bold text-[#22A7E9]"
@@ -52,11 +48,9 @@ const Cote = ({ flavor, portion, inStock }) => {
     )
   }
   return (
-    <div className="flex flex-col w-fit font-trebuchet">
+    <div className="flex flex-col w-fit font-trebuchet mb-4">
       <div
-        className={`relative flex flex-col w-[320px] h-[509px] ${
-          inStock ? 'cursor-pointer' : null
-        }`}
+        className={`relative flex flex-col w-[320px] h-[509px] ${inStock && 'cursor-pointer'}`}
         role="checkbox"
         aria-checked={isChecked}
         tabIndex="0"
@@ -91,7 +85,7 @@ const Cote = ({ flavor, portion, inStock }) => {
         >
           с {flavor}
         </p>
-        <p
+        <div
           className={`absolute top-[143px] left-[51px] text-sm [line-height:1.2] ${
             inStock ? 'text-[#666666]' : 'opacity-50 text-[#B3B3B3]'
           }`}
@@ -99,8 +93,8 @@ const Cote = ({ flavor, portion, inStock }) => {
           <span className="font-bold">{portion}</span> порций
           <br />
           {mouses[portion]}
-          {portion === 100 ? 'заказчик доволен' : null}
-        </p>
+          {portion === 100 && 'заказчик доволен'}
+        </div>
         <div className={`absolute right-[16px] bottom-[16px] w-20 h-20 ${ovalBg()} rounded-full`}>
           <div className="h-full w-full [line-height:22px] font-normal text-white text-center">
             <p className="text-[42px] pt-[20px]">{weight[portion]}</p>
@@ -108,7 +102,7 @@ const Cote = ({ flavor, portion, inStock }) => {
           </div>
         </div>
       </div>
-      {underLine()}
+      <div className="text-[13px] pt-3 font-normal text-white text-center">{underLine()}</div>
     </div>
   )
 }

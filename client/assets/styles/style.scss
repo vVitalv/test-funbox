@@ -10,3 +10,15 @@
   font-family: 'Exo 2 Thin';
   src: url('/client/assets/fonts/Exo2-Thin.ttf') format('opentype');
 }
+
+h1 {
+  @apply text-base text-yellow-400 font-bold;
+}
+
+.question {
+  @apply text-[14px] text-gray-400;
+}
+
+.answer {
+  @apply text-yellow-200 pl-6;
+}
