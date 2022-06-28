@@ -1,18 +1,18 @@
 import React from 'react'
-import { Outlet, useParams } from 'react-router-dom'
+import { Outlet, useLocation } from 'react-router-dom'
 
 import Head from './head'
 import Sidebar from './sidebar/sidebar'
 import bg from '../assets/images/fone.png'
 
 const Home = () => {
-  const location = useParams()
+  const { pathname } = useLocation()
   return (
     <div
-      className="flex flex-col min-h-screen min-w-[375px] justify-center bg-repeat"
+      className="relative min-h-screen min-w-[375px] bg-repeat"
       style={{ backgroundImage: `url(${bg})` }}
     >
-      <Head title={location} />
+      <Head title={pathname} />
       <Sidebar />
       <Outlet />
     </div>

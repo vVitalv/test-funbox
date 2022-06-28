@@ -5,13 +5,13 @@ const Head = ({ title }) => {
   return (
     <Helmet>
       <meta charSet="utf-8" />
-      <title>{`MERN Boilerplate - ${title}`}</title>
+      <title>{`Funbox test - ${title}`}</title>
     </Helmet>
   )
 }
 
 Head.defaultProps = {
-  title: `${window.location.host}`
+  title: `${window.location.pathname}`
 }
 
 export default Head

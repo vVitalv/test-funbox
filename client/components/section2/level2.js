@@ -10,7 +10,7 @@ const Level2 = () => {
   const portion2 = 40
   const portion3 = 100
   const inStockfromDB1 = 51
-  const inStockfromDB2 = 51
+  const inStockfromDB2 = 26
   const inStockfromDB3 = 0
   return (
     <div className="flex items-center justify-center flex-col w-full h-full">
