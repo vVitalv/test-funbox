@@ -1,7 +1,12 @@
 {
-  "name": "testfunbox",
+  "name": "funbox-quest",
   "version": "1.0.0",
   "main": "index.js",
+  "engines": {
+    "node": "16.15.x",
+    "npm": "8.5.x",
+    "yarn": "1.22.x"
+  },
   "author": "pepel",
   "license": "MIT",
   "scripts": {
