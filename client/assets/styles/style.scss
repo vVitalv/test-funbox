@@ -22,3 +22,7 @@ h1 {
 .answer {
   @apply text-yellow-200 pb-4 pl-6 border-b-4 border-gray-300 last:border-none;
 }
+
+.link {
+  @apply text-purple-300 hover:text-purple-200 transition-colors;
+}

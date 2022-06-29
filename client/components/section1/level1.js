@@ -58,10 +58,7 @@ const Level1 = () => {
       <p className="answer">
         A5 Сначала через Chrome DevTools нужно найти целевой элемент, выявить в нем свойства CSS,
         которые применяются некорректно, проверить свойство в CanIUse. <br /> Ну а вообще, IE{' '}
-        <a
-          className="text-purple-300 hover:text-purple-200 transition-colors"
-          href="https://www.youtube.com/watch?v=TfgCrwlhAgw"
-        >
+        <a className="link" href="https://www.youtube.com/watch?v=TfgCrwlhAgw">
           «... был хорошим инструментом для загрузки других браузеров»
         </a>
       </p>
@@ -91,25 +88,24 @@ const Level1 = () => {
       <p className="answer">
         A8 Около 2 лет назад прошел курсы fullstack React.js + Node.js. В процессе прохождения
         курсов принимал участие в разработке учебного портала{' '}
-        <a
-          className="text-purple-300 hover:text-purple-200 transition-colors"
-          href="https://www.skillcrucial.com"
-        >
+        <a className="link" href="https://www.skillcrucial.com">
           skillcrucial.com
         </a>
         , далее развивался на pet-проектах: <br />
-        <a
-          className="text-purple-300 hover:text-purple-200 transition-colors"
-          href="https://www.floodary.herokuapp.com"
-        >
+        <a className="link" href="https://www.floodary.herokuapp.com">
           - чат на websocket
         </a>
+        , код{' '}
+        <a className="link" href="https://github.com/vVitalv/floodary">
+          здесь
+        </a>
         <br />
-        <a
-          className="text-purple-300 hover:text-purple-200 transition-colors"
-          href="https://www.floodary.herokuapp.com"
-        >
+        <a className="link" href="https://www.maccaroni.herokuapp.com">
           - ecommerce
+        </a>
+        , код{' '}
+        <a className="link" href="https://github.com/vVitalv/week14-ecommerce">
+          здесь
         </a>
       </p>
     </div>
